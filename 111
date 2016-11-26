@@ -1,0 +1,20 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+int main() {
+	double p, sum, kop;
+	int i = 0, x, y, k, rub;
+	cin >> p >> x >>  y >> k;
+	p = 1 + p / 100;
+	sum = (x + (y / 100));
+	while (i != k){
+	sum = (sum * p);
+	i++;
+	}
+	rub = trunc(sum);
+	kop = sum - trunc(sum);
+	cout << rub << " " << trunc(kop * 100);
+	return 0;
+}
