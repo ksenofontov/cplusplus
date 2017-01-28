@@ -3,7 +3,7 @@
 #include <algorithm>
 using namespace std;
 vector <int> color;
-vector <int> colsize;
+vector <int> colorsize;
 
 struct edge
 {
@@ -16,13 +16,21 @@ bool comp(edge e1, edge e2){
 	return e1.weight > e2.weight;
 }
 
-void union_vertex(int v1, int v2)
+void union_vertex(int v1, int v2){
+	if (colorsize[v1] > colorsize[v2]){
+		for (int i = 0; i < color.size(); i++){
+			if (color [i] == color [v1]
+			{
+		}
+	}
+}
 
 int main() {
 	int m, n;
 	cin >> n >> m;
 	vector <edge> G (m);
-	colsize.resize(n);
+	color.resize(n);
+	colorsize.resize(n, 1);
 	for (int i = 0; i < m; i++){
 	cin >> G[i].v1 >> G[i].v2 >> G[i].weight;
 	}
